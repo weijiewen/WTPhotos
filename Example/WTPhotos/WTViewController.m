@@ -8,6 +8,8 @@
 
 #import "WTViewController.h"
 
+#import <Photos/Photos.h>
+
 @interface WTViewController ()
 
 @end
@@ -17,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
 }
 
 - (void)didReceiveMemoryWarning

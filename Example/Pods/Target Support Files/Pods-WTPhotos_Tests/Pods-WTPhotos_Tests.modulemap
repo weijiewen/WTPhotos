@@ -1,0 +1,6 @@
+framework module Pods_WTPhotos_Tests {
+  umbrella header "Pods-WTPhotos_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

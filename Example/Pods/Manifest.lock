@@ -1,0 +1,16 @@
+PODS:
+  - WTPhotos (1.0.0)
+
+DEPENDENCIES:
+  - WTPhotos (from `../`)
+
+EXTERNAL SOURCES:
+  WTPhotos:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WTPhotos: 762ae8126329d340708a1c704ce55e882c6f5634
+
+PODFILE CHECKSUM: e92987bc198b07e38fd842019a8b896b46bca9f4
+
+COCOAPODS: 1.9.3

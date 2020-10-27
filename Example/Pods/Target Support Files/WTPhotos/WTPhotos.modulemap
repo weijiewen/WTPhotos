@@ -1,0 +1,6 @@
+framework module WTPhotos {
+  umbrella header "WTPhotos-umbrella.h"
+
+  export *
+  module * { export * }
+}
