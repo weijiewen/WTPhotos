@@ -336,7 +336,7 @@
     if (self.selectedAssets.count > 0) {
         self.previewButton.selected = true;
         self.confirmButton.selected = true;
-        confirmText = [NSString stringWithFormat:@"%@(%ld)", confirmText,self.selectedAssets.count];
+        confirmText = [NSString stringWithFormat:@"%@(%ld)", confirmText, (long)self.selectedAssets.count];
         self.confirmButton.backgroundColor = [UIColor colorWithRed:35.f / 255.f green:190.f / 255.f blue:56.f / 255.f alpha:1];
     }
     else {

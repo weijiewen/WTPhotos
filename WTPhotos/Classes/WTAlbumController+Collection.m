@@ -81,13 +81,13 @@
         NSMutableString *predicateString = [NSMutableString string];
         switch (self.configuration.pickType) {
             case WTAlbumConfigurationTypeOnlyImage:
-                [predicateString appendFormat:@"mediaType == %ld", PHAssetMediaTypeImage];
+                [predicateString appendFormat:@"mediaType == %ld", (long)PHAssetMediaTypeImage];
                 break;
             case WTAlbumConfigurationTypeOnlyVideo:
-                [predicateString appendFormat:@"mediaType == %ld", PHAssetMediaTypeVideo];
+                [predicateString appendFormat:@"mediaType == %ld", (long)PHAssetMediaTypeVideo];
                 break;
             default:
-                [predicateString appendFormat:@"mediaType == %ld || mediaType == %ld", PHAssetMediaTypeImage, PHAssetMediaTypeVideo];
+                [predicateString appendFormat:@"mediaType == %ld || mediaType == %ld", (long)PHAssetMediaTypeImage, (long)PHAssetMediaTypeVideo];
                 break;
         }
         options.predicate = [NSPredicate predicateWithFormat:predicateString];
