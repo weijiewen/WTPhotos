@@ -12,7 +12,7 @@
 
 #import "WTImageBrowser.h"
 
-@interface WTViewController ()
+@interface WTViewController () <WTAlbumControllerDelegate>
 @property (nonatomic, copy) NSArray <UIImageView *> *imageViews;
 @property (nonatomic, strong) NSArray <WTAssetData *> *datas;
 @end
@@ -53,41 +53,42 @@
 - (void)action_imageTap:(UITapGestureRecognizer *)sender {
     UIImageView *imageView = (UIImageView *)sender.view;
     if (imageView.image) {
-        NSInteger index = [self.imageViews indexOfObject:imageView];
-        [WTImageBrowser showImageCount:self.datas.count browserIndex:index fromImageViews:self.imageViews setImage:^(UIImageView * _Nonnull imageView, NSInteger index) {
-            imageView.image = self.imageViews[index].image;
+        UIImage *image = imageView.image;
+        [WTImageBrowser animationOpenImageCount:1 browserIndex:0 fromImageViews:@[imageView] setImage:^(UIImageView * _Nonnull imageView, NSInteger index) {
+            imageView.image = image;
         } longPress:nil];
     }
 }
 
 - (void)action_album {
     __weak typeof(self) weakSelf = self;
-    WTAlbumController *controller = [[WTAlbumController alloc] initAlbumPickImageWithEditPath:^UIBezierPath * _Nonnull(CGRect editRect) {
-        UIBezierPath *path = [UIBezierPath bezierPath];
-        [path addArcWithCenter:CGPointMake(editRect.size.width / 2, editRect.size.height / 2) radius:editRect.size.width / 2 startAngle:0 endAngle:M_PI * 2 clockwise:true];
-        return path;
-    } selectedImage:^(UIImage * _Nonnull editImage) {
-        weakSelf.imageViews.firstObject.image = editImage;
+    WTAlbumConfiguration *configuration = [[WTAlbumConfiguration alloc] initWithImageMaxCount:3 videoMaxCount:1];
+    WTAlbumController *controller = [[WTAlbumController alloc] initWithConfiguration:configuration selectedDatas:^(NSArray<WTAssetData *> * _Nonnull datas) {
+        weakSelf.datas = datas;
+        for (NSInteger i = 0; i < weakSelf.imageViews.count; i ++) {
+            if (i < datas.count) {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    UIImage *image = [[UIImage alloc] initWithData:datas[i].data];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        weakSelf.imageViews[i].image = image;
+                    });
+                });
+            }
+            else {
+                weakSelf.imageViews[i].image = nil;
+            }
+        }
+
     }];
-//    WTAlbumController *controller = [[WTAlbumController alloc] initWithAlbumTypes:WTAlbumAssetImage maxSelectedCount:9 selectedDatas:^(NSArray<WTAssetData *> * _Nonnull datas) {
-//        weakSelf.datas = datas;
-//        for (NSInteger i = 0; i < weakSelf.imageViews.count; i ++) {
-//            if (i < datas.count) {
-//                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//                    UIImage *image = [[UIImage alloc] initWithData:datas[i].assetData];
-//                    dispatch_async(dispatch_get_main_queue(), ^{
-//                        weakSelf.imageViews[i].image = image;
-//                    });
-//                });
-//            }
-//            else {
-//                weakSelf.imageViews[i].image = nil;
-//            }
-//        }
+    
+//    WTAlbumController *controller = [[WTAlbumController alloc] initAlbumPickHeaderWithSelectedImage:^(UIImage * _Nonnull editImage) {
+//        self.imageViews.firstObject.image = editImage;
 //    }];
-//    controller.imageAndViodeOnlyOne = false;
+    
+    
+    controller.albumDelegate = self;
     [self presentViewController:controller animated:true completion:^{
-            
+
     }];
 }
 

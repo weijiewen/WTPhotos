@@ -6,37 +6,42 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		257378B76D2E8CE6F33383C948578F47 /* WTPhotos */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 6FEB9E5CBBA7D38D5A4C9B190FEE4B41 /* Build configuration list for PBXAggregateTarget "WTPhotos" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = WTPhotos;
-			productName = WTPhotos;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		26FEBCD5BB8AA383322FFC79B2BF3DAE /* Pods-WTPhotos_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF766F3BD19E1ED1818CE59F9DDF31B5 /* Pods-WTPhotos_Example-dummy.m */; };
-		279E2C5A30BC3FDBB3A204D5CF93B4BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		4E154202C9B7E808D9D86128AB3343B7 /* Pods-WTPhotos_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A20345A26B4E2C686FF6A111F218D /* Pods-WTPhotos_Tests-dummy.m */; };
-		7F6E2C48F3E21193CC0B526A01E3F52F /* Pods-WTPhotos_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22EA3A7226B74D0BF9F868012FC8637F /* Pods-WTPhotos_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		849F65F4E1AD1425A4E9373DD81BBA3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		F97B3FA78BB1B02E2EACF5E88F353550 /* Pods-WTPhotos_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB13AB4A756E250C390005A47230BF5F /* Pods-WTPhotos_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0548F986C3FFB0A6E0F5C41EE3A4479D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		05E8668EA6BADA78219A32372AFB7885 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		0C24288095173B852D0D7379B324DD37 /* WTImageBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB1F40F6375BB17771BC3E2BEDA2A1B /* WTImageBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CBE08C7187FB1E3AE93397E626956A1 /* WTAlbumController.h in Headers */ = {isa = PBXBuildFile; fileRef = 34DBF47C51486984258272FE96B75CA8 /* WTAlbumController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26FEBCD5BB8AA383322FFC79B2BF3DAE /* Pods-WTPhotos_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC50076B6C39C9B8464DCBBBB50409 /* Pods-WTPhotos_Example-dummy.m */; };
+		3F2E64C8D394817D574A779D6D02EC71 /* WTAlbumController+Configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = 090FCBACB20BE332AD98A7E1A97696BC /* WTAlbumController+Configuration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E154202C9B7E808D9D86128AB3343B7 /* Pods-WTPhotos_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AA8F4212F6D9973A2D9A79E058BD28 /* Pods-WTPhotos_Tests-dummy.m */; };
+		5673571362480A7530CF18BBF1828FE4 /* WTPhotos-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B192D2AEC8E3D50CA17D5C858D00407 /* WTPhotos-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6326B3EAFD7D608724D49446C893ABC7 /* WTAlbumDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8955E7221367FC3E19A49D5D975E9F9F /* WTAlbumDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DD94CA1EA163D7AC81F3457FF4CFB67 /* WTImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA2BEEA5F9494B3EBEE4C6CD4FC46B /* WTImageBrowser.m */; };
+		7F6E2C48F3E21193CC0B526A01E3F52F /* Pods-WTPhotos_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE8D9BC397815CDE229C32EEC36FD4E /* Pods-WTPhotos_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A59D125C930B06DC4C047C9AB2A2FADB /* WTAlbumController+Collection.m in Sources */ = {isa = PBXBuildFile; fileRef = 862559AA7410642CCC7723C074654F43 /* WTAlbumController+Collection.m */; };
+		AC4905F8BCFA06AA2B51A20FAB14FD70 /* WTPhotos-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EA493B3F1CF737185845A8D6C7B110 /* WTPhotos-dummy.m */; };
+		B1C67B1EBDCC67654ED39164E7F2264B /* WTAlbumController+Asset.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEA893626743CA33E9031262D42C6C7 /* WTAlbumController+Asset.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B50C577DF3E9DF41C120CE69AF8999A1 /* WTAlbumController+Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = D096AE84CF3FF890EBB05C17AB5B3AAC /* WTAlbumController+Configuration.m */; };
+		B5522E9D4442BA64B29031669DE8B009 /* WTAlbumCropController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134A7D67810331EB22138B3EDBB93E57 /* WTAlbumCropController.m */; };
+		C0FAFF58EB8B5B5A37BCC5C2110AD3F3 /* WTAlbumController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0418FE2FB1B22F3312F836757FDDD508 /* WTAlbumController+Category.m */; };
+		C84AD5969EB06374C3C04884092D5789 /* WTAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C06300451440DBAA96747DC43F9B5D /* WTAlbumController.m */; };
+		CDD2ADB43660DC9003C9FB47727F2A83 /* WTAlbumController+Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9D60104193A13BE376A3A0B22DAB43 /* WTAlbumController+Asset.m */; };
+		E5FA80C411826B60A4B24261768A6184 /* WTAlbumController+Category.h in Headers */ = {isa = PBXBuildFile; fileRef = 427752579D45A02985BB286C4580FDEB /* WTAlbumController+Category.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB01F024E22EA7428EE74F977CAC5308 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F97B3FA78BB1B02E2EACF5E88F353550 /* Pods-WTPhotos_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 831CC643F8E3E516AEF6CE30CA8AD581 /* Pods-WTPhotos_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBB3DC69F1DD5543AEFFB74DADD9BAEC /* WTAlbumCropController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F2FDF0433062934A0C0DDDC53A8FDCB /* WTAlbumCropController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF9C1DB860FB1E3478B15D08BA5B1CD7 /* WTAlbumController+Collection.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A48D32DFF4E3A58E4106A8ED21194B /* WTAlbumController+Collection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B11716DB94E5FB9A732544165A40DCF /* PBXContainerItemProxy */ = {
+		2AD1CB63E490679D18CAAB4822767793 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DE8B5DA1EDDC1544D799A2D540989BB1;
 			remoteInfo = "Pods-WTPhotos_Example";
 		};
-		56C0C149D2E84621DE2E8328048EEF75 /* PBXContainerItemProxy */ = {
+		A9F1363AAD25433CC31D8A84B190F80A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -46,39 +51,69 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025D5B4DBA7A4D3AD67ADA920BC077F5 /* WTPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTPhotos.release.xcconfig; sourceTree = "<group>"; };
+		0418FE2FB1B22F3312F836757FDDD508 /* WTAlbumController+Category.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WTAlbumController+Category.m"; path = "WTPhotos/Classes/WTAlbumController+Category.m"; sourceTree = "<group>"; };
 		045AF21516CA3319AAFF8D2B3A4D0A80 /* Pods_WTPhotos_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTPhotos_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		090FCBACB20BE332AD98A7E1A97696BC /* WTAlbumController+Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Configuration.h"; path = "WTPhotos/Classes/WTAlbumController+Configuration.h"; sourceTree = "<group>"; };
+		0F2FDF0433062934A0C0DDDC53A8FDCB /* WTAlbumCropController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTAlbumCropController.h; path = WTPhotos/Classes/WTAlbumCropController.h; sourceTree = "<group>"; };
+		134A7D67810331EB22138B3EDBB93E57 /* WTAlbumCropController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WTAlbumCropController.m; path = WTPhotos/Classes/WTAlbumCropController.m; sourceTree = "<group>"; };
+		14021566E40298BD39B63C7149C1EAAC /* Pods-WTPhotos_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		214DCA0C6529C19485A9B3A7BA74FEA0 /* Pods-WTPhotos_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTPhotos_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		21D84F250DD202A9B66A05A870BA0E03 /* Pods_WTPhotos_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTPhotos_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		22EA3A7226B74D0BF9F868012FC8637F /* Pods-WTPhotos_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTPhotos_Example-umbrella.h"; sourceTree = "<group>"; };
-		264329341D369B0AC6875BA766B0377D /* Pods-WTPhotos_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTPhotos_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		290FC9E3210817731D255035D29908A5 /* Pods-WTPhotos_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTPhotos_Tests.modulemap"; sourceTree = "<group>"; };
-		2F2C7B988FDD5CA6E23548606D3A9231 /* Pods-WTPhotos_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3A337B8965C9D924D13C47C0E7CBABE5 /* WTPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTPhotos.debug.xcconfig; sourceTree = "<group>"; };
-		4D4D43462025B5D27213121C461C4DA4 /* Pods-WTPhotos_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Tests-Info.plist"; sourceTree = "<group>"; };
-		623A26FE555EB73CD86F3E6FF32940EB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		679889BC640FE76096FBC95E6C102271 /* WTPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTPhotos.release.xcconfig; sourceTree = "<group>"; };
-		68A0376AE7BFDE91DADA10FABE142A8D /* Pods-WTPhotos_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F3F9E7AE1BF7B9299F9AC0E416C6AA8 /* Pods-WTPhotos_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8F3A20345A26B4E2C686FF6A111F218D /* Pods-WTPhotos_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTPhotos_Tests-dummy.m"; sourceTree = "<group>"; };
-		97C908A123BE98E86F2D422CA307359A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2CEC50076B6C39C9B8464DCBBBB50409 /* Pods-WTPhotos_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTPhotos_Example-dummy.m"; sourceTree = "<group>"; };
+		34DBF47C51486984258272FE96B75CA8 /* WTAlbumController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTAlbumController.h; path = WTPhotos/Classes/WTAlbumController.h; sourceTree = "<group>"; };
+		34F99CBE256A52649FDB9B2B5CC7C4A0 /* Pods-WTPhotos_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Example.release.xcconfig"; sourceTree = "<group>"; };
+		427752579D45A02985BB286C4580FDEB /* WTAlbumController+Category.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Category.h"; path = "WTPhotos/Classes/WTAlbumController+Category.h"; sourceTree = "<group>"; };
+		52221FA668BCCD3DB60BF9F7E638A54D /* WTPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTPhotos.debug.xcconfig; sourceTree = "<group>"; };
+		557F9E4EDEED24D647BC34915233DDE3 /* WTPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WTPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A23FE158F7280DE5248A062E320F8A4 /* Pods-WTPhotos_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B192D2AEC8E3D50CA17D5C858D00407 /* WTPhotos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTPhotos-umbrella.h"; sourceTree = "<group>"; };
+		5C9E535147917F88D30C32B16BD7C380 /* Pods-WTPhotos_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTPhotos_Example.modulemap"; sourceTree = "<group>"; };
+		5DE8D9BC397815CDE229C32EEC36FD4E /* Pods-WTPhotos_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTPhotos_Example-umbrella.h"; sourceTree = "<group>"; };
+		625845B142B0AA322FCDB95A89E728E9 /* WTPhotos.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WTPhotos.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7BFA2BEEA5F9494B3EBEE4C6CD4FC46B /* WTImageBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WTImageBrowser.m; path = WTPhotos/Classes/WTImageBrowser.m; sourceTree = "<group>"; };
+		7F78FE592C0A33EEE0D8FF32033A3209 /* WTPhotos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WTPhotos-Info.plist"; sourceTree = "<group>"; };
+		831CC643F8E3E516AEF6CE30CA8AD581 /* Pods-WTPhotos_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTPhotos_Tests-umbrella.h"; sourceTree = "<group>"; };
+		862559AA7410642CCC7723C074654F43 /* WTAlbumController+Collection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WTAlbumController+Collection.m"; path = "WTPhotos/Classes/WTAlbumController+Collection.m"; sourceTree = "<group>"; };
+		8955E7221367FC3E19A49D5D975E9F9F /* WTAlbumDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTAlbumDelegate.h; path = WTPhotos/Classes/WTAlbumDelegate.h; sourceTree = "<group>"; };
+		8E6E1E6D4F706A8EBD16458E404F6D51 /* WTPhotos.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WTPhotos.modulemap; sourceTree = "<group>"; };
+		9122637D784019D30818B328286AF4DA /* Pods-WTPhotos_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Tests-Info.plist"; sourceTree = "<group>"; };
+		914755E83FC6ED1DA014A00B84E9AD19 /* Pods-WTPhotos_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Example-Info.plist"; sourceTree = "<group>"; };
+		96A48D32DFF4E3A58E4106A8ED21194B /* WTAlbumController+Collection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Collection.h"; path = "WTPhotos/Classes/WTAlbumController+Collection.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D17ABE2F18AB02778F1B496672DFB7B2 /* Pods-WTPhotos_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTPhotos_Example.modulemap"; sourceTree = "<group>"; };
-		D61E51A37689988803C833AFA27E4C3C /* Pods-WTPhotos_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Example-Info.plist"; sourceTree = "<group>"; };
-		D8E5CCEA4528D8A80A6026EBC1A9280E /* Pods-WTPhotos_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D95D47484E7DDD87A3D36E2D58117C9F /* Pods-WTPhotos_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		DF766F3BD19E1ED1818CE59F9DDF31B5 /* Pods-WTPhotos_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTPhotos_Example-dummy.m"; sourceTree = "<group>"; };
-		E55B0D87B889CEC4FE5B39E9F8D45FF5 /* WTPhotos.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WTPhotos.podspec; sourceTree = "<group>"; tabWidth = 2; };
-		E99D2EE7A44E33C58DA95904D69A51A8 /* Pods-WTPhotos_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		EB13AB4A756E250C390005A47230BF5F /* Pods-WTPhotos_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTPhotos_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F9AD5A88F5B839718739B252DB3F097E /* Pods-WTPhotos_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTPhotos_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9DD621011845AC2A74B3A2A945E77440 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9FEA893626743CA33E9031262D42C6C7 /* WTAlbumController+Asset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Asset.h"; path = "WTPhotos/Classes/WTAlbumController+Asset.h"; sourceTree = "<group>"; };
+		A69FF8C6D948F975870978348312050B /* Pods-WTPhotos_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTPhotos_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B9EA493B3F1CF737185845A8D6C7B110 /* WTPhotos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WTPhotos-dummy.m"; sourceTree = "<group>"; };
+		BB508B5C8CC215FEC192E489CDB5B2E7 /* Pods-WTPhotos_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BDB1F40F6375BB17771BC3E2BEDA2A1B /* WTImageBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTImageBrowser.h; path = WTPhotos/Classes/WTImageBrowser.h; sourceTree = "<group>"; };
+		C83E9A515701FA5A755CE6FB01C88166 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C8C06300451440DBAA96747DC43F9B5D /* WTAlbumController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WTAlbumController.m; path = WTPhotos/Classes/WTAlbumController.m; sourceTree = "<group>"; };
+		D088D060C44351790863021C516C41FF /* Pods-WTPhotos_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTPhotos_Tests.modulemap"; sourceTree = "<group>"; };
+		D096AE84CF3FF890EBB05C17AB5B3AAC /* WTAlbumController+Configuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WTAlbumController+Configuration.m"; path = "WTPhotos/Classes/WTAlbumController+Configuration.m"; sourceTree = "<group>"; };
+		DAA4149342A12954751970867F5A1417 /* Pods-WTPhotos_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WTPhotos_Example-frameworks.sh"; sourceTree = "<group>"; };
+		DB9D60104193A13BE376A3A0B22DAB43 /* WTAlbumController+Asset.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WTAlbumController+Asset.m"; path = "WTPhotos/Classes/WTAlbumController+Asset.m"; sourceTree = "<group>"; };
+		DE951C30A5B6CFCEB7664A8A3DAE631A /* WTPhotos-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTPhotos-prefix.pch"; sourceTree = "<group>"; };
+		E2AA8F4212F6D9973A2D9A79E058BD28 /* Pods-WTPhotos_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTPhotos_Tests-dummy.m"; sourceTree = "<group>"; };
+		EF5C470579F719EE9C4AB3CF27794B65 /* Pods-WTPhotos_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F7594E8724FF904823526FEB90A74FCF /* Pods-WTPhotos_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1BE675E2498B7456EA8FF104DCAA5E75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0548F986C3FFB0A6E0F5C41EE3A4479D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A13EC5A5DAE124580DA2EDBAE51A236 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				279E2C5A30BC3FDBB3A204D5CF93B4BD /* Foundation.framework in Frameworks */,
+				05E8668EA6BADA78219A32372AFB7885 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,126 +121,148 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849F65F4E1AD1425A4E9373DD81BBA3F /* Foundation.framework in Frameworks */,
+				EB01F024E22EA7428EE74F977CAC5308 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0761851196BA9A792E06B2A182A69723 /* Pods-WTPhotos_Example */ = {
+		3CC7FA4BF4D8AC2C525F9F64672ADE6B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D17ABE2F18AB02778F1B496672DFB7B2 /* Pods-WTPhotos_Example.modulemap */,
-				F9AD5A88F5B839718739B252DB3F097E /* Pods-WTPhotos_Example-acknowledgements.markdown */,
-				E99D2EE7A44E33C58DA95904D69A51A8 /* Pods-WTPhotos_Example-acknowledgements.plist */,
-				DF766F3BD19E1ED1818CE59F9DDF31B5 /* Pods-WTPhotos_Example-dummy.m */,
-				D61E51A37689988803C833AFA27E4C3C /* Pods-WTPhotos_Example-Info.plist */,
-				22EA3A7226B74D0BF9F868012FC8637F /* Pods-WTPhotos_Example-umbrella.h */,
-				D8E5CCEA4528D8A80A6026EBC1A9280E /* Pods-WTPhotos_Example.debug.xcconfig */,
-				2F2C7B988FDD5CA6E23548606D3A9231 /* Pods-WTPhotos_Example.release.xcconfig */,
+				045AF21516CA3319AAFF8D2B3A4D0A80 /* Pods_WTPhotos_Example.framework */,
+				21D84F250DD202A9B66A05A870BA0E03 /* Pods_WTPhotos_Tests.framework */,
+				557F9E4EDEED24D647BC34915233DDE3 /* WTPhotos.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		476D9E610159E3B7D561B96EB3808168 /* Pods-WTPhotos_Example */ = {
+			isa = PBXGroup;
+			children = (
+				5C9E535147917F88D30C32B16BD7C380 /* Pods-WTPhotos_Example.modulemap */,
+				A69FF8C6D948F975870978348312050B /* Pods-WTPhotos_Example-acknowledgements.markdown */,
+				F7594E8724FF904823526FEB90A74FCF /* Pods-WTPhotos_Example-acknowledgements.plist */,
+				2CEC50076B6C39C9B8464DCBBBB50409 /* Pods-WTPhotos_Example-dummy.m */,
+				DAA4149342A12954751970867F5A1417 /* Pods-WTPhotos_Example-frameworks.sh */,
+				914755E83FC6ED1DA014A00B84E9AD19 /* Pods-WTPhotos_Example-Info.plist */,
+				5DE8D9BC397815CDE229C32EEC36FD4E /* Pods-WTPhotos_Example-umbrella.h */,
+				BB508B5C8CC215FEC192E489CDB5B2E7 /* Pods-WTPhotos_Example.debug.xcconfig */,
+				34F99CBE256A52649FDB9B2B5CC7C4A0 /* Pods-WTPhotos_Example.release.xcconfig */,
 			);
 			name = "Pods-WTPhotos_Example";
 			path = "Target Support Files/Pods-WTPhotos_Example";
 			sourceTree = "<group>";
 		};
-		27716669721F842FA75A16ED12F57B80 /* Products */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				045AF21516CA3319AAFF8D2B3A4D0A80 /* Pods_WTPhotos_Example.framework */,
-				21D84F250DD202A9B66A05A870BA0E03 /* Pods_WTPhotos_Tests.framework */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		3C9C6ED607314227A50E1A73F5E905FD /* Pod */ = {
+		71DC4E47D7345419300B3292EE759930 /* Pods-WTPhotos_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				97C908A123BE98E86F2D422CA307359A /* LICENSE */,
-				623A26FE555EB73CD86F3E6FF32940EB /* README.md */,
-				E55B0D87B889CEC4FE5B39E9F8D45FF5 /* WTPhotos.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		3D324619B53209CCF991F400495AB5F7 /* WTPhotos */ = {
-			isa = PBXGroup;
-			children = (
-				3C9C6ED607314227A50E1A73F5E905FD /* Pod */,
-				682D791905039B0169EEBD112145BC64 /* Support Files */,
-			);
-			name = WTPhotos;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		606C9703FD3F77821933F35A570BCFBA /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0761851196BA9A792E06B2A182A69723 /* Pods-WTPhotos_Example */,
-				9396962B7C840BEE8CEE8A42140C11E5 /* Pods-WTPhotos_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		682D791905039B0169EEBD112145BC64 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3A337B8965C9D924D13C47C0E7CBABE5 /* WTPhotos.debug.xcconfig */,
-				679889BC640FE76096FBC95E6C102271 /* WTPhotos.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WTPhotos";
-			sourceTree = "<group>";
-		};
-		9396962B7C840BEE8CEE8A42140C11E5 /* Pods-WTPhotos_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				290FC9E3210817731D255035D29908A5 /* Pods-WTPhotos_Tests.modulemap */,
-				264329341D369B0AC6875BA766B0377D /* Pods-WTPhotos_Tests-acknowledgements.markdown */,
-				7F3F9E7AE1BF7B9299F9AC0E416C6AA8 /* Pods-WTPhotos_Tests-acknowledgements.plist */,
-				8F3A20345A26B4E2C686FF6A111F218D /* Pods-WTPhotos_Tests-dummy.m */,
-				4D4D43462025B5D27213121C461C4DA4 /* Pods-WTPhotos_Tests-Info.plist */,
-				EB13AB4A756E250C390005A47230BF5F /* Pods-WTPhotos_Tests-umbrella.h */,
-				68A0376AE7BFDE91DADA10FABE142A8D /* Pods-WTPhotos_Tests.debug.xcconfig */,
-				D95D47484E7DDD87A3D36E2D58117C9F /* Pods-WTPhotos_Tests.release.xcconfig */,
+				D088D060C44351790863021C516C41FF /* Pods-WTPhotos_Tests.modulemap */,
+				214DCA0C6529C19485A9B3A7BA74FEA0 /* Pods-WTPhotos_Tests-acknowledgements.markdown */,
+				EF5C470579F719EE9C4AB3CF27794B65 /* Pods-WTPhotos_Tests-acknowledgements.plist */,
+				E2AA8F4212F6D9973A2D9A79E058BD28 /* Pods-WTPhotos_Tests-dummy.m */,
+				9122637D784019D30818B328286AF4DA /* Pods-WTPhotos_Tests-Info.plist */,
+				831CC643F8E3E516AEF6CE30CA8AD581 /* Pods-WTPhotos_Tests-umbrella.h */,
+				5A23FE158F7280DE5248A062E320F8A4 /* Pods-WTPhotos_Tests.debug.xcconfig */,
+				14021566E40298BD39B63C7149C1EAAC /* Pods-WTPhotos_Tests.release.xcconfig */,
 			);
 			name = "Pods-WTPhotos_Tests";
 			path = "Target Support Files/Pods-WTPhotos_Tests";
 			sourceTree = "<group>";
 		};
-		B5B9EA95973B613267A529E918956D56 /* Development Pods */ = {
+		85DEF0363EF1E94F98E9E01DD82A3931 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3D324619B53209CCF991F400495AB5F7 /* WTPhotos */,
+				8E6E1E6D4F706A8EBD16458E404F6D51 /* WTPhotos.modulemap */,
+				B9EA493B3F1CF737185845A8D6C7B110 /* WTPhotos-dummy.m */,
+				7F78FE592C0A33EEE0D8FF32033A3209 /* WTPhotos-Info.plist */,
+				DE951C30A5B6CFCEB7664A8A3DAE631A /* WTPhotos-prefix.pch */,
+				5B192D2AEC8E3D50CA17D5C858D00407 /* WTPhotos-umbrella.h */,
+				52221FA668BCCD3DB60BF9F7E638A54D /* WTPhotos.debug.xcconfig */,
+				025D5B4DBA7A4D3AD67ADA920BC077F5 /* WTPhotos.release.xcconfig */,
 			);
-			name = "Development Pods";
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WTPhotos";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		917C1A7B9BEFA1B422F2AE78015E89FD /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				9DD621011845AC2A74B3A2A945E77440 /* LICENSE */,
+				C83E9A515701FA5A755CE6FB01C88166 /* README.md */,
+				625845B142B0AA322FCDB95A89E728E9 /* WTPhotos.podspec */,
 			);
-			name = iOS;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		B33794D46C1EBA4F5A76CA6DAEA6FC5A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7B62E0434E4115098077F2EDF0CBCBC /* WTPhotos */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				B5B9EA95973B613267A529E918956D56 /* Development Pods */,
+				B33794D46C1EBA4F5A76CA6DAEA6FC5A /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				27716669721F842FA75A16ED12F57B80 /* Products */,
-				606C9703FD3F77821933F35A570BCFBA /* Targets Support Files */,
+				3CC7FA4BF4D8AC2C525F9F64672ADE6B /* Products */,
+				D28770E4C21090B79C95408A98F2B0D3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D28770E4C21090B79C95408A98F2B0D3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				476D9E610159E3B7D561B96EB3808168 /* Pods-WTPhotos_Example */,
+				71DC4E47D7345419300B3292EE759930 /* Pods-WTPhotos_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D7B62E0434E4115098077F2EDF0CBCBC /* WTPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				427752579D45A02985BB286C4580FDEB /* WTAlbumController+Category.h */,
+				0418FE2FB1B22F3312F836757FDDD508 /* WTAlbumController+Category.m */,
+				34DBF47C51486984258272FE96B75CA8 /* WTAlbumController.h */,
+				C8C06300451440DBAA96747DC43F9B5D /* WTAlbumController.m */,
+				9FEA893626743CA33E9031262D42C6C7 /* WTAlbumController+Asset.h */,
+				DB9D60104193A13BE376A3A0B22DAB43 /* WTAlbumController+Asset.m */,
+				96A48D32DFF4E3A58E4106A8ED21194B /* WTAlbumController+Collection.h */,
+				862559AA7410642CCC7723C074654F43 /* WTAlbumController+Collection.m */,
+				090FCBACB20BE332AD98A7E1A97696BC /* WTAlbumController+Configuration.h */,
+				D096AE84CF3FF890EBB05C17AB5B3AAC /* WTAlbumController+Configuration.m */,
+				0F2FDF0433062934A0C0DDDC53A8FDCB /* WTAlbumCropController.h */,
+				134A7D67810331EB22138B3EDBB93E57 /* WTAlbumCropController.m */,
+				8955E7221367FC3E19A49D5D975E9F9F /* WTAlbumDelegate.h */,
+				BDB1F40F6375BB17771BC3E2BEDA2A1B /* WTImageBrowser.h */,
+				7BFA2BEEA5F9494B3EBEE4C6CD4FC46B /* WTImageBrowser.m */,
+				917C1A7B9BEFA1B422F2AE78015E89FD /* Pod */,
+				85DEF0363EF1E94F98E9E01DD82A3931 /* Support Files */,
+			);
+			name = WTPhotos;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +284,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1F4EA33C92AE2C7A01A83658135F322 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C67B1EBDCC67654ED39164E7F2264B /* WTAlbumController+Asset.h in Headers */,
+				E5FA80C411826B60A4B24261768A6184 /* WTAlbumController+Category.h in Headers */,
+				FF9C1DB860FB1E3478B15D08BA5B1CD7 /* WTAlbumController+Collection.h in Headers */,
+				3F2E64C8D394817D574A779D6D02EC71 /* WTAlbumController+Configuration.h in Headers */,
+				1CBE08C7187FB1E3AE93397E626956A1 /* WTAlbumController.h in Headers */,
+				FBB3DC69F1DD5543AEFFB74DADD9BAEC /* WTAlbumCropController.h in Headers */,
+				6326B3EAFD7D608724D49446C893ABC7 /* WTAlbumDelegate.h in Headers */,
+				0C24288095173B852D0D7379B324DD37 /* WTImageBrowser.h in Headers */,
+				5673571362480A7530CF18BBF1828FE4 /* WTPhotos-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		257378B76D2E8CE6F33383C948578F47 /* WTPhotos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A090F11CE139361A5A3782168B2808E8 /* Build configuration list for PBXNativeTarget "WTPhotos" */;
+			buildPhases = (
+				F1F4EA33C92AE2C7A01A83658135F322 /* Headers */,
+				B8532E0E127A3F26E0D89D2313EB9CA7 /* Sources */,
+				1BE675E2498B7456EA8FF104DCAA5E75 /* Frameworks */,
+				38BBA69A6D78F70838592084490A30B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WTPhotos;
+			productName = WTPhotos;
+			productReference = 557F9E4EDEED24D647BC34915233DDE3 /* WTPhotos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D87A25440CF02D6BFE74D7C1719EBDAE /* Pods-WTPhotos_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF5CFE3E257E85841FCBE1CBF038EF8 /* Build configuration list for PBXNativeTarget "Pods-WTPhotos_Tests" */;
@@ -242,7 +333,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				871ABD31D43E69351A33B446AD96C8AC /* PBXTargetDependency */,
+				347ED477CF928060D34C5B3AEB892D60 /* PBXTargetDependency */,
 			);
 			name = "Pods-WTPhotos_Tests";
 			productName = "Pods-WTPhotos_Tests";
@@ -261,7 +352,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				89106F08D3E101EB07CD19B618C9C0A4 /* PBXTargetDependency */,
+				46746B0C1A73D8C21633E902343DAFFF /* PBXTargetDependency */,
 			);
 			name = "Pods-WTPhotos_Example";
 			productName = "Pods-WTPhotos_Example";
@@ -275,7 +366,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -286,7 +377,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 27716669721F842FA75A16ED12F57B80 /* Products */;
+			productRefGroup = 3CC7FA4BF4D8AC2C525F9F64672ADE6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -299,6 +390,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		2BC781F9D05A1AD479F9D2BA74CBD4F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BBA69A6D78F70838592084490A30B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,30 +429,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8532E0E127A3F26E0D89D2313EB9CA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD2ADB43660DC9003C9FB47727F2A83 /* WTAlbumController+Asset.m in Sources */,
+				C0FAFF58EB8B5B5A37BCC5C2110AD3F3 /* WTAlbumController+Category.m in Sources */,
+				A59D125C930B06DC4C047C9AB2A2FADB /* WTAlbumController+Collection.m in Sources */,
+				B50C577DF3E9DF41C120CE69AF8999A1 /* WTAlbumController+Configuration.m in Sources */,
+				C84AD5969EB06374C3C04884092D5789 /* WTAlbumController.m in Sources */,
+				B5522E9D4442BA64B29031669DE8B009 /* WTAlbumCropController.m in Sources */,
+				7DD94CA1EA163D7AC81F3457FF4CFB67 /* WTImageBrowser.m in Sources */,
+				AC4905F8BCFA06AA2B51A20FAB14FD70 /* WTPhotos-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		871ABD31D43E69351A33B446AD96C8AC /* PBXTargetDependency */ = {
+		347ED477CF928060D34C5B3AEB892D60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-WTPhotos_Example";
 			target = DE8B5DA1EDDC1544D799A2D540989BB1 /* Pods-WTPhotos_Example */;
-			targetProxy = 3B11716DB94E5FB9A732544165A40DCF /* PBXContainerItemProxy */;
+			targetProxy = 2AD1CB63E490679D18CAAB4822767793 /* PBXContainerItemProxy */;
 		};
-		89106F08D3E101EB07CD19B618C9C0A4 /* PBXTargetDependency */ = {
+		46746B0C1A73D8C21633E902343DAFFF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WTPhotos;
 			target = 257378B76D2E8CE6F33383C948578F47 /* WTPhotos */;
-			targetProxy = 56C0C149D2E84621DE2E8328048EEF75 /* PBXContainerItemProxy */;
+			targetProxy = A9F1363AAD25433CC31D8A84B190F80A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		134FA271FA47B830965B15BE96C25DF2 /* Release */ = {
+		2CACA253C6CE2878F480582B8B8028F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D95D47484E7DDD87A3D36E2D58117C9F /* Pods-WTPhotos_Tests.release.xcconfig */;
+			baseConfigurationReference = 52221FA668BCCD3DB60BF9F7E638A54D /* WTPhotos.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -363,32 +474,29 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WTPhotos_Tests/Pods-WTPhotos_Tests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/WTPhotos/WTPhotos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WTPhotos/WTPhotos-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WTPhotos_Tests/Pods-WTPhotos_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/WTPhotos/WTPhotos.modulemap";
+				PRODUCT_MODULE_NAME = WTPhotos;
+				PRODUCT_NAME = WTPhotos;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		1C675F946A3A2AE98CE2F3D60927C800 /* Debug */ = {
+		329B037576FA0E59187640F797BAE2F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68A0376AE7BFDE91DADA10FABE142A8D /* Pods-WTPhotos_Tests.debug.xcconfig */;
+			baseConfigurationReference = 5A23FE158F7280DE5248A062E320F8A4 /* Pods-WTPhotos_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -399,7 +507,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-WTPhotos_Tests/Pods-WTPhotos_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-WTPhotos_Tests/Pods-WTPhotos_Tests.modulemap";
@@ -416,12 +524,11 @@
 			};
 			name = Debug;
 		};
-		268B72D10835B1A6C91F2046C00FB6CD /* Debug */ = {
+		5F73CD943D5CCA38D4FB87FC06FF9210 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8E5CCEA4528D8A80A6026EBC1A9280E /* Pods-WTPhotos_Example.debug.xcconfig */;
+			baseConfigurationReference = BB508B5C8CC215FEC192E489CDB5B2E7 /* Pods-WTPhotos_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -432,7 +539,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example.modulemap";
@@ -449,24 +556,44 @@
 			};
 			name = Debug;
 		};
-		4325E89EC9A432CD4B713CE27C715475 /* Release */ = {
+		6B4F6E7636C1A7D3C6E7CD5A18ED9C24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 679889BC640FE76096FBC95E6C102271 /* WTPhotos.release.xcconfig */;
+			baseConfigurationReference = 14021566E40298BD39B63C7149C1EAAC /* Pods-WTPhotos_Tests.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTPhotos_Tests/Pods-WTPhotos_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTPhotos_Tests/Pods-WTPhotos_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+		6D42DC62C4F2E194221DF89C48496C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -512,7 +639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -523,10 +650,75 @@
 			};
 			name = Release;
 		};
-		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+		954229811D9F512F04ADE648291A27B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F99CBE256A52649FDB9B2B5CC7C4A0 /* Pods-WTPhotos_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C6416F1EE02E7AF19C0329D8B199F425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 025D5B4DBA7A4D3AD67ADA920BC077F5 /* WTPhotos.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WTPhotos/WTPhotos-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WTPhotos/WTPhotos-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WTPhotos/WTPhotos.modulemap";
+				PRODUCT_MODULE_NAME = WTPhotos;
+				PRODUCT_NAME = WTPhotos;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4D0D44B090D4284607EBBC4E71A96C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -575,7 +767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -588,61 +780,14 @@
 			};
 			name = Debug;
 		};
-		872AD09F6EBC781F8D997548B904F645 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A337B8965C9D924D13C47C0E7CBABE5 /* WTPhotos.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F4B738C4D605B421526E3CE1577C7539 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F2C7B988FDD5CA6E23548606D3A9231 /* Pods-WTPhotos_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		3DF5CFE3E257E85841FCBE1CBF038EF8 /* Build configuration list for PBXNativeTarget "Pods-WTPhotos_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C675F946A3A2AE98CE2F3D60927C800 /* Debug */,
-				134FA271FA47B830965B15BE96C25DF2 /* Release */,
+				329B037576FA0E59187640F797BAE2F3 /* Debug */,
+				6B4F6E7636C1A7D3C6E7CD5A18ED9C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -650,8 +795,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
-				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+				E4D0D44B090D4284607EBBC4E71A96C1 /* Debug */,
+				6D42DC62C4F2E194221DF89C48496C98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -659,17 +804,17 @@
 		636376E0D249529101381ED8C0533702 /* Build configuration list for PBXNativeTarget "Pods-WTPhotos_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				268B72D10835B1A6C91F2046C00FB6CD /* Debug */,
-				F4B738C4D605B421526E3CE1577C7539 /* Release */,
+				5F73CD943D5CCA38D4FB87FC06FF9210 /* Debug */,
+				954229811D9F512F04ADE648291A27B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6FEB9E5CBBA7D38D5A4C9B190FEE4B41 /* Build configuration list for PBXAggregateTarget "WTPhotos" */ = {
+		A090F11CE139361A5A3782168B2808E8 /* Build configuration list for PBXNativeTarget "WTPhotos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				872AD09F6EBC781F8D997548B904F645 /* Debug */,
-				4325E89EC9A432CD4B713CE27C715475 /* Release */,
+				2CACA253C6CE2878F480582B8B8028F6 /* Debug */,
+				C6416F1EE02E7AF19C0329D8B199F425 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

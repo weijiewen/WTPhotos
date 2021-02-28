@@ -29,16 +29,24 @@ NS_ASSUME_NONNULL_BEGIN
                          longPress:(nullable void(^)(NSInteger index, UIImage *image, WTImageBrowser *imageBrowser))longPress;
 
 /// 动画开启浏览器
+/// @param imageView imageView description
+/// @param image image description
+/// @param longPress longPress description
++ (void)animationOpenFromImageView:(UIImageView *)imageView
+                             image:(void(^)(UIImageView *imageView, NSInteger index))image
+                         longPress:(nullable void(^)(NSInteger index, UIImage *image, WTImageBrowser *imageBrowser))longPress;
+
+/// 动画开启浏览器
 /// @param imageCount imageCount description
 /// @param browserIndex browserIndex description
 /// @param fromImageViews fromImageView description
 /// @param setImage setImage description
 /// @param longPress longPress description
-+ (void)showImageCount:(NSInteger)imageCount
-          browserIndex:(NSInteger)browserIndex
-        fromImageViews:(NSArray <UIView *> *)fromImageViews
-              setImage:(void(^)(UIImageView *imageView, NSInteger index))setImage
-             longPress:(nullable void(^)(NSInteger index, UIImage *image, WTImageBrowser *imageBrowser))longPress;
++ (void)animationOpenImageCount:(NSInteger)imageCount
+                   browserIndex:(NSInteger)browserIndex
+                 fromImageViews:(NSArray <UIView *> *)fromImageViews
+                       setImage:(void(^)(UIImageView *imageView, NSInteger index))setImage
+                      longPress:(nullable void(^)(NSInteger index, UIImage *image, WTImageBrowser *imageBrowser))longPress;
 
 @end
 

@@ -37,8 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04FFBF2A251E48B200704930 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		04FFBF2D251E48B200704930 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		04FFBF38251E48DA00704930 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		11D84E6BB56B1270F608507F /* WTPhotos.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WTPhotos.podspec; path = ../WTPhotos.podspec; sourceTree = "<group>"; };
 		125C19A6255CF69900C14FB2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -100,32 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04FFBF28251E48B200704930 /* WTPhotos */ = {
-			isa = PBXGroup;
-			children = (
-				04FFBF29251E48B200704930 /* Classes */,
-				04FFBF2C251E48B200704930 /* Assets */,
-			);
-			name = WTPhotos;
-			path = ../WTPhotos;
-			sourceTree = "<group>";
-		};
-		04FFBF29251E48B200704930 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				04FFBF2A251E48B200704930 /* .gitkeep */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		04FFBF2C251E48B200704930 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				04FFBF2D251E48B200704930 /* .gitkeep */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		26ABDC143A69DE90F8136BF9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +112,6 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				04FFBF28251E48B200704930 /* WTPhotos */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for WTPhotos */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -239,6 +210,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				6F51C986DD98AD6AB30A3C81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,8 +251,8 @@
 				ORGANIZATIONNAME = "txywjw@icloud.com";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = 59N2SM9GHU;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = ZT86N8ZEWA;
+						ProvisioningStyle = Manual;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -348,6 +320,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F51C986DD98AD6AB30A3C81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/WTPhotos/WTPhotos.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WTPhotos.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WTPhotos_Example/Pods-WTPhotos_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB94F8184F00C1164F360B0E /* [CP] Check Pods Manifest.lock */ = {
@@ -524,16 +514,17 @@
 			baseConfigurationReference = B5EC9E6F8D4A9536FAF305AC /* Pods-WTPhotos_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 59N2SM9GHU;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZT86N8ZEWA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTPhotos/WTPhotos-Prefix.pch";
 				INFOPLIST_FILE = "WTPhotos/WTPhotos-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = HXDevelopment;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -548,14 +539,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Nanning Guangxi Hao star advertising planning Co., Ltd. (ZT86N8ZEWA)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Nanning Guangxi Hao star advertising planning Co., Ltd. (ZT86N8ZEWA)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZT86N8ZEWA;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTPhotos/WTPhotos-Prefix.pch";
 				INFOPLIST_FILE = "WTPhotos/WTPhotos-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = HXAdHoc;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
