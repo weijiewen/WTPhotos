@@ -8,11 +8,10 @@
 
 #import "WTImageBrowser.h"
 
-@class HXBrowserImageView;
 @protocol WTBrowserImageViewDelegate <NSObject>
 @required
 @optional
-- (void)imageChange:(HXBrowserImageView *)imageView;
+- (void)imageChange:(UIImageView *)imageView;
 @end
 @interface HXBrowserImageView : UIImageView
 @property (nonatomic, weak) id <WTBrowserImageViewDelegate> delegate;
@@ -43,25 +42,30 @@
 @end
 @implementation WTImageBrowserCollectionViewCell
 
+- (void)dealloc {
+    [self.imageView removeObserver:self forKeyPath:@"image"];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.clipsToBounds = true;
+        self.clipsToBounds = YES;
         self.scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         self.scrollView.minimumZoomScale = 1;
         self.scrollView.maximumZoomScale = 8;
         self.scrollView.delegate = self;
-        self.scrollView.showsHorizontalScrollIndicator = false;
-        self.scrollView.showsVerticalScrollIndicator = false;
-        self.scrollView.bounces = false;
-        self.scrollView.clipsToBounds = false;
+        self.scrollView.showsHorizontalScrollIndicator = NO;
+        self.scrollView.showsVerticalScrollIndicator = NO;
+        self.scrollView.bounces = NO;
+        self.scrollView.clipsToBounds = NO;
         [self.contentView addSubview:self.scrollView];
         
         self.imageView = [[HXBrowserImageView alloc] initWithFrame:self.scrollView.bounds];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-        self.imageView.clipsToBounds = false;
+        self.imageView.clipsToBounds = NO;
         self.imageView.delegate = self;
+        [self.imageView addObserver:self forKeyPath:@"image" options:NSKeyValueObservingOptionNew context:nil];
         [self.scrollView addSubview:self.imageView];
         
         UITapGestureRecognizer *twoTouchTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(action_twoTap)];
@@ -78,6 +82,12 @@
         [self.scrollView addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(action_longPress:)]];
     }
     return self;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"image"]) {
+        self.scrollView.contentOffset = CGPointMake(0, self.scrollView.contentSize.height / 2 - self.scrollView.bounds.size.height / 2);
+    }
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
@@ -103,21 +113,20 @@
     self.imageView.frame = imageViewFrame;
 }
 
-- (void)imageChange:(HXBrowserImageView *)imageView {
+- (void)imageChange:(UIImageView *)imageView {
     CGFloat imageHeight = imageView.image.size.height / imageView.image.size.width * self.scrollView.bounds.size.width;
     CGFloat y = imageHeight > self.scrollView.bounds.size.height ? 0 : self.scrollView.bounds.size.height / 2 - imageHeight / 2;
     self.imageView.frame = CGRectMake(0, y, self.scrollView.bounds.size.width, imageHeight);
     CGFloat scrollHeight = imageHeight > self.scrollView.bounds.size.height ? imageHeight : self.scrollView.bounds.size.height;
     self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, scrollHeight);
-    self.scrollView.contentOffset = CGPointMake(0, self.scrollView.contentSize.height / 2 - self.scrollView.bounds.size.height / 2);
 }
 
 - (void)action_twoTap {
     if (self.scrollView.zoomScale == 2) {
-        [self.scrollView setZoomScale:1 animated:true];
+        [self.scrollView setZoomScale:1 animated:YES];
     }
     else {
-        [self.scrollView setZoomScale:2 animated:true];
+        [self.scrollView setZoomScale:2 animated:YES];
     }
 }
 
@@ -138,7 +147,7 @@
 }
 
 - (void)reloadCell {
-    [self.scrollView setZoomScale:1 animated:true];
+    [self.scrollView setZoomScale:1 animated:YES];
 }
 
 @end
@@ -171,17 +180,11 @@
     return [self initWithImageCount:imageCount browserIndex:browserIndex fromImageViews:nil setImage:setImage longPress:longPress];
 }
 
-+ (void)animationOpenFromImageView:(UIImageView *)imageView
-                             image:(void(^)(UIImageView *imageView, NSInteger index))image
-                         longPress:(nullable void(^)(NSInteger index, UIImage *image, WTImageBrowser *imageBrowser))longPress {
-    [self animationOpenImageCount:1 browserIndex:0 fromImageViews:@[imageView] setImage:image longPress:longPress];
-}
-
-+ (void)animationOpenImageCount:(NSInteger)imageCount
-                   browserIndex:(NSInteger)browserIndex
-                 fromImageViews:(NSArray <UIImageView *> *)fromImageViews
-                       setImage:(void(^)(UIImageView *imageView, NSInteger index))setImage
-                      longPress:(nullable void(^)(NSInteger index, UIImage *image, WTImageBrowser *imageBrowser))longPress {
++ (void)showImageCount:(NSInteger)imageCount
+                  browserIndex:(NSInteger)browserIndex
+                fromImageViews:(NSArray <UIImageView *> *)fromImageViews
+                      setImage:(void(^)(UIImageView *imageView, NSInteger index))setImage
+                     longPress:(nullable void(^)(NSInteger index, UIImage *image, WTImageBrowser *imageBrowser))longPress {
     WTImageBrowser *browser = [[WTImageBrowser alloc] initWithImageCount:imageCount browserIndex:browserIndex fromImageViews:fromImageViews setImage:setImage longPress:longPress];
     [UIApplication.sharedApplication.keyWindow.rootViewController addChildViewController:browser];
     [UIApplication.sharedApplication.keyWindow.rootViewController.view addSubview:browser.view];
@@ -200,9 +203,6 @@
         self.currentIndex = browserIndex;
         if (self.currentIndex >= imageCount) {
             self.currentIndex = imageCount - 1;
-        }
-        if (self.currentIndex < 0) {
-            self.currentIndex = 0;
         }
         self.imageCount = imageCount;
         self.setImage = setImage;
@@ -247,9 +247,9 @@
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.pagingEnabled = true;
-    self.collectionView.showsVerticalScrollIndicator = false;
-    self.collectionView.showsHorizontalScrollIndicator = false;
+    self.collectionView.pagingEnabled = YES;
+    self.collectionView.showsVerticalScrollIndicator = NO;
+    self.collectionView.showsHorizontalScrollIndicator = NO;
     [self.collectionView registerClass:[WTImageBrowserCollectionViewCell class] forCellWithReuseIdentifier:[WTImageBrowserCollectionViewCell identifier]];
     [self.view addSubview:self.collectionView];
     
@@ -257,13 +257,16 @@
         self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
     else {
-        self.automaticallyAdjustsScrollViewInsets = false;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        self.automaticallyAdjustsScrollViewInsets = NO;
+#pragma clang diagnostic pop
     }
-    if (self.navigationController) {
+    if (self.navigationController && !self.fromImageViews.count) {
         self.navigationBarHidden = self.navigationController.navigationBar.hidden;
         self.interactivePopGestureRecognizerEnable = self.navigationController.interactivePopGestureRecognizer.isEnabled;
-        self.navigationController.navigationBar.hidden = true;
-        self.navigationController.interactivePopGestureRecognizer.enabled = false;
+        self.navigationController.navigationBar.hidden = YES;
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
     
     if (self.imageCount > 1) {
@@ -279,7 +282,7 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.collectionView layoutIfNeeded];
-                [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:self.currentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:false];
+                [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:self.currentIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
                 if (self.fromImageViews[self.currentIndex]) {
                     self.view.userInteractionEnabled = false;
                     [UIView animateWithDuration:0.3 animations:^{
@@ -354,14 +357,12 @@
         }];
     }
     else if (self.navigationController) {
-        self.chooseImage = nil;
         self.navigationController.navigationBar.hidden = self.navigationBarHidden;
         self.navigationController.interactivePopGestureRecognizer.enabled = self.interactivePopGestureRecognizerEnable;
-        [self.navigationController popViewControllerAnimated:true];
+        [self.navigationController popViewControllerAnimated:YES];
     }
     else {
-        self.chooseImage = nil;
-        [self dismissViewControllerAnimated:true completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
@@ -375,7 +376,6 @@
 - (void)action_choose {
     WTImageBrowserCollectionViewCell *cell = (WTImageBrowserCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0]];
     !self.chooseImage ?: self.chooseImage(self, self.currentIndex, cell.imageView.image);
-    self.chooseImage = nil;
 }
 
 @end
