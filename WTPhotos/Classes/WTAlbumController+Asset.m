@@ -269,7 +269,7 @@
         [activityIndicatorView startAnimating];
         [self.view addSubview:activityIndicatorView];
         [asset wt_requestData];
-        [asset wt_getData:^(NSData * _Nonnull data) {
+        [asset wt_getData:^(NSData * _Nonnull data, BOOL isGif) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 if (self.configuration.editPath) {
                     UIImage *image = [[UIImage alloc] initWithData:data];
@@ -279,7 +279,7 @@
                             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                                 WTAssetData *assetData = [[WTAssetData alloc] init];
                                 assetData.data = UIImagePNGRepresentation(editImage);
-                                assetData.assetType = WTAlbumAssetImage;
+                                assetData.assetType = isGif ? WTAlbumAssetGif : WTAlbumAssetImage;
                                 dispatch_async(dispatch_get_main_queue(), ^{
                                     self.configuration.selectedDatas(@[assetData]);
                                     [self.navigationController dismissViewControllerAnimated:true completion:nil];
@@ -294,7 +294,7 @@
                 else {
                     WTAssetData *assetData = [[WTAssetData alloc] init];
                     assetData.data = data;
-                    assetData.assetType = WTAlbumAssetImage;
+                    assetData.assetType = isGif ? WTAlbumAssetGif : WTAlbumAssetImage;
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [activityIndicatorView removeFromSuperview];
                         self.configuration.selectedDatas(@[assetData]);
@@ -394,10 +394,15 @@
         for (NSInteger i = 0; i < self.selectedAssets.count; i ++) {
             dispatch_group_enter(group);
             PHAsset *asset = self.selectedAssets[i];
-            [asset wt_getData:^(NSData *data) {
+            [asset wt_getData:^(NSData *data, BOOL isGif) {
                 WTAssetData *assetData = [[WTAssetData alloc] init];
                 assetData.data = data;
-                assetData.assetType = asset.mediaType == PHAssetMediaTypeImage ? WTAlbumAssetImage : WTAlbumAssetVideo;
+                if (asset.mediaType == PHAssetMediaTypeImage) {
+                    assetData.assetType = isGif ? WTAlbumAssetGif : WTAlbumAssetImage;
+                }
+                else {
+                    assetData.assetType = WTAlbumAssetVideo;
+                }
                 assetDatas[i] = assetData;
                 dispatch_group_leave(group);
             }];

@@ -119,10 +119,11 @@
 #pragma mark --------------------------------- PHAsset (WTAlbumAsset) ---------------------------------
 
 @implementation PHAsset (WTAlbumAsset)
-- (void)setWt_getData:(void (^)(NSData *))wt_getData {
+
+- (void)setWt_getData:(void (^)(NSData *data, BOOL isGif))wt_getData {
     objc_setAssociatedObject(self, @selector(wt_getData), wt_getData, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
-- (void (^)(NSData *))wt_getData {
+- (void (^)(NSData *data, BOOL isGif))wt_getData {
     return objc_getAssociatedObject(self, _cmd);
 }
 - (void)setWt_assetData:(NSData *)wt_assetData {
@@ -130,6 +131,13 @@
 }
 - (NSData *)wt_assetData {
     return objc_getAssociatedObject(self, _cmd);
+}
+- (void)setIsGif:(BOOL)isGif {
+    objc_setAssociatedObject(self, @selector(isGif), @(isGif), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)isGif {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 - (void)setWt_imageRequestID:(PHImageRequestID)wt_imageRequestID {
     objc_setAssociatedObject(self, @selector(wt_imageRequestID), @(wt_imageRequestID), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -198,7 +206,8 @@
                 NSData *data = [NSData dataWithContentsOfURL:url];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.wt_assetData = data;
-                    !self.wt_getData ?: self.wt_getData(self.wt_assetData);
+                    self.isGif = NO;
+                    !self.wt_getData ?: self.wt_getData(self.wt_assetData, NO);
                     self.wt_getData = nil;
                 });
             });
@@ -210,16 +219,22 @@
                 NSData *data = UIImagePNGRepresentation(image);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.wt_assetData = data;
-                    !self.wt_getData ?: self.wt_getData(self.wt_assetData);
+                    self.isGif = NO;
+                    !self.wt_getData ?: self.wt_getData(self.wt_assetData, NO);
                     self.wt_getData = nil;
                 });
             });
+        } gifResultHandler:^(NSData *imageData) {
+            self.isGif = YES;
+            self.wt_assetData = imageData;
+            !self.wt_getData ?: self.wt_getData(self.wt_assetData, NO);
+            self.wt_getData = nil;
         }];
     }
 }
-- (void)wt_getData:(void(^)(NSData *data))getData {
+- (void)wt_getData:(void(^)(NSData *data, BOOL isGif))getData {
     if (self.wt_assetData) {
-        getData(self.wt_assetData);
+        getData(self.wt_assetData, self.isGif);
     }
     else {
         self.wt_getData = getData;

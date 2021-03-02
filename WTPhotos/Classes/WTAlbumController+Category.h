@@ -31,14 +31,15 @@ NS_ASSUME_NONNULL_BEGIN
                               finish:(void(^)(NSArray <PHAssetCollection *> *collections, BOOL isLimit))finish;
 @end
 @interface PHAsset (WTAlbumAsset)
-@property (nonatomic, copy, nullable) void(^wt_getData)(NSData *data);
+@property (nonatomic, copy, nullable) void(^wt_getData)(NSData *data, BOOL isGif);
+@property (nonatomic, assign) BOOL isGif;
 @property (nonatomic, strong, nullable) NSData *wt_assetData;
 @property (nonatomic, assign) PHImageRequestID wt_imageRequestID;
 - (PHImageRequestID)wt_imageWithSize:(CGSize)size
                   resultImageHandler:(nullable void(^)(UIImage *image))resultImageHandler;
 - (void)wt_requestData;
 - (void)wt_cancelRequestData;
-- (void)wt_getData:(void(^)(NSData *data))getData;
+- (void)wt_getData:(void(^)(NSData *data, BOOL isGif))getData;
 @end
 @interface UIImageView (WTAlbumAsset)
 @property (nonatomic, copy) NSString *wt_assetLocalIdentifier;
