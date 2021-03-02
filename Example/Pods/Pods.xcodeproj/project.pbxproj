@@ -53,24 +53,24 @@
 /* Begin PBXFileReference section */
 		025D5B4DBA7A4D3AD67ADA920BC077F5 /* WTPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTPhotos.release.xcconfig; sourceTree = "<group>"; };
 		0418FE2FB1B22F3312F836757FDDD508 /* WTAlbumController+Category.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WTAlbumController+Category.m"; path = "WTPhotos/Classes/WTAlbumController+Category.m"; sourceTree = "<group>"; };
-		045AF21516CA3319AAFF8D2B3A4D0A80 /* Pods_WTPhotos_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTPhotos_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		045AF21516CA3319AAFF8D2B3A4D0A80 /* Pods_WTPhotos_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WTPhotos_Example.framework; path = "Pods-WTPhotos_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		090FCBACB20BE332AD98A7E1A97696BC /* WTAlbumController+Configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Configuration.h"; path = "WTPhotos/Classes/WTAlbumController+Configuration.h"; sourceTree = "<group>"; };
 		0F2FDF0433062934A0C0DDDC53A8FDCB /* WTAlbumCropController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTAlbumCropController.h; path = WTPhotos/Classes/WTAlbumCropController.h; sourceTree = "<group>"; };
 		134A7D67810331EB22138B3EDBB93E57 /* WTAlbumCropController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WTAlbumCropController.m; path = WTPhotos/Classes/WTAlbumCropController.m; sourceTree = "<group>"; };
 		14021566E40298BD39B63C7149C1EAAC /* Pods-WTPhotos_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		214DCA0C6529C19485A9B3A7BA74FEA0 /* Pods-WTPhotos_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTPhotos_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		21D84F250DD202A9B66A05A870BA0E03 /* Pods_WTPhotos_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WTPhotos_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21D84F250DD202A9B66A05A870BA0E03 /* Pods_WTPhotos_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WTPhotos_Tests.framework; path = "Pods-WTPhotos_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEC50076B6C39C9B8464DCBBBB50409 /* Pods-WTPhotos_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WTPhotos_Example-dummy.m"; sourceTree = "<group>"; };
 		34DBF47C51486984258272FE96B75CA8 /* WTAlbumController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTAlbumController.h; path = WTPhotos/Classes/WTAlbumController.h; sourceTree = "<group>"; };
 		34F99CBE256A52649FDB9B2B5CC7C4A0 /* Pods-WTPhotos_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Example.release.xcconfig"; sourceTree = "<group>"; };
 		427752579D45A02985BB286C4580FDEB /* WTAlbumController+Category.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Category.h"; path = "WTPhotos/Classes/WTAlbumController+Category.h"; sourceTree = "<group>"; };
 		52221FA668BCCD3DB60BF9F7E638A54D /* WTPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WTPhotos.debug.xcconfig; sourceTree = "<group>"; };
-		557F9E4EDEED24D647BC34915233DDE3 /* WTPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WTPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		557F9E4EDEED24D647BC34915233DDE3 /* WTPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WTPhotos.framework; path = WTPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A23FE158F7280DE5248A062E320F8A4 /* Pods-WTPhotos_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B192D2AEC8E3D50CA17D5C858D00407 /* WTPhotos-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WTPhotos-umbrella.h"; sourceTree = "<group>"; };
 		5C9E535147917F88D30C32B16BD7C380 /* Pods-WTPhotos_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTPhotos_Example.modulemap"; sourceTree = "<group>"; };
 		5DE8D9BC397815CDE229C32EEC36FD4E /* Pods-WTPhotos_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WTPhotos_Example-umbrella.h"; sourceTree = "<group>"; };
-		625845B142B0AA322FCDB95A89E728E9 /* WTPhotos.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WTPhotos.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		625845B142B0AA322FCDB95A89E728E9 /* WTPhotos.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WTPhotos.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7BFA2BEEA5F9494B3EBEE4C6CD4FC46B /* WTImageBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WTImageBrowser.m; path = WTPhotos/Classes/WTImageBrowser.m; sourceTree = "<group>"; };
 		7F78FE592C0A33EEE0D8FF32033A3209 /* WTPhotos-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WTPhotos-Info.plist"; sourceTree = "<group>"; };
@@ -81,14 +81,14 @@
 		9122637D784019D30818B328286AF4DA /* Pods-WTPhotos_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Tests-Info.plist"; sourceTree = "<group>"; };
 		914755E83FC6ED1DA014A00B84E9AD19 /* Pods-WTPhotos_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WTPhotos_Example-Info.plist"; sourceTree = "<group>"; };
 		96A48D32DFF4E3A58E4106A8ED21194B /* WTAlbumController+Collection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Collection.h"; path = "WTPhotos/Classes/WTAlbumController+Collection.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DD621011845AC2A74B3A2A945E77440 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DD621011845AC2A74B3A2A945E77440 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		9FEA893626743CA33E9031262D42C6C7 /* WTAlbumController+Asset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "WTAlbumController+Asset.h"; path = "WTPhotos/Classes/WTAlbumController+Asset.h"; sourceTree = "<group>"; };
 		A69FF8C6D948F975870978348312050B /* Pods-WTPhotos_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WTPhotos_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B9EA493B3F1CF737185845A8D6C7B110 /* WTPhotos-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WTPhotos-dummy.m"; sourceTree = "<group>"; };
 		BB508B5C8CC215FEC192E489CDB5B2E7 /* Pods-WTPhotos_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WTPhotos_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BDB1F40F6375BB17771BC3E2BEDA2A1B /* WTImageBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WTImageBrowser.h; path = WTPhotos/Classes/WTImageBrowser.h; sourceTree = "<group>"; };
-		C83E9A515701FA5A755CE6FB01C88166 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C83E9A515701FA5A755CE6FB01C88166 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		C8C06300451440DBAA96747DC43F9B5D /* WTAlbumController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WTAlbumController.m; path = WTPhotos/Classes/WTAlbumController.m; sourceTree = "<group>"; };
 		D088D060C44351790863021C516C41FF /* Pods-WTPhotos_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WTPhotos_Tests.modulemap"; sourceTree = "<group>"; };
 		D096AE84CF3FF890EBB05C17AB5B3AAC /* WTAlbumController+Configuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "WTAlbumController+Configuration.m"; path = "WTPhotos/Classes/WTAlbumController+Configuration.m"; sourceTree = "<group>"; };
@@ -243,12 +243,12 @@
 		D7B62E0434E4115098077F2EDF0CBCBC /* WTPhotos */ = {
 			isa = PBXGroup;
 			children = (
-				427752579D45A02985BB286C4580FDEB /* WTAlbumController+Category.h */,
-				0418FE2FB1B22F3312F836757FDDD508 /* WTAlbumController+Category.m */,
 				34DBF47C51486984258272FE96B75CA8 /* WTAlbumController.h */,
 				C8C06300451440DBAA96747DC43F9B5D /* WTAlbumController.m */,
 				9FEA893626743CA33E9031262D42C6C7 /* WTAlbumController+Asset.h */,
 				DB9D60104193A13BE376A3A0B22DAB43 /* WTAlbumController+Asset.m */,
+				427752579D45A02985BB286C4580FDEB /* WTAlbumController+Category.h */,
+				0418FE2FB1B22F3312F836757FDDD508 /* WTAlbumController+Category.m */,
 				96A48D32DFF4E3A58E4106A8ED21194B /* WTAlbumController+Collection.h */,
 				862559AA7410642CCC7723C074654F43 /* WTAlbumController+Collection.m */,
 				090FCBACB20BE332AD98A7E1A97696BC /* WTAlbumController+Configuration.h */,
@@ -644,7 +644,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

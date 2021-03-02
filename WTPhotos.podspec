@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WTPhotos'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = '我在仰望 月亮之上 有多少梦想在自由地飞翔.'
 
 # This description is used to generate tags and improve search results.

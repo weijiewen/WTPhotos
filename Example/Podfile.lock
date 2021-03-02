@@ -1,5 +1,5 @@
 PODS:
-  - WTPhotos (1.0.0)
+  - WTPhotos (1.0.5)
 
 DEPENDENCIES:
   - WTPhotos (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WTPhotos: 14a552ee24d41f6c4892cdb1eb6dde6a4fed83e4
+  WTPhotos: 4d001e237a9920e70fba87a5bb73cbc173108b29
 
 PODFILE CHECKSUM: e92987bc198b07e38fd842019a8b896b46bca9f4
 
