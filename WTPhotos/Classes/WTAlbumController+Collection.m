@@ -35,6 +35,16 @@
     return self;
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.tableView.frame = self.view.bounds;
+    CGFloat bottom = 0.f;
+    if (@available(iOS 11.0, *)) {
+        bottom = self.view.safeAreaInsets.bottom;
+    }
+    self.tableView.tableFooterView.frame = CGRectMake(0, 0, self.tableView.bounds.size.width, bottom);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
@@ -45,16 +55,11 @@
     UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:text style:UIBarButtonItemStylePlain target:self action:@selector(action_cancel)];
     self.navigationItem.leftBarButtonItems = @[cancelItem];
     
-    CGFloat y = UIApplication.sharedApplication.statusBarFrame.size.height + 44;
-    CGFloat bottom = 0.f;
-    if (y > 44) {
-        bottom = 24;
-    }
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, y, self.view.bounds.size.width, self.view.bounds.size.height - y - bottom) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.backgroundColor = self.view.backgroundColor;
     tableView.showsVerticalScrollIndicator = false;
-    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 20)];
+    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 0)];
     tableView.delegate = self;
     tableView.dataSource = self;
     if (@available(iOS 11.0, *)) {
