@@ -26,6 +26,7 @@
 @property (nonatomic, strong) UIButton *confirmButton;
 @property (nonatomic, assign) NSUInteger imageCount;
 @property (nonatomic, assign) NSUInteger videoCount;
+@property (nonatomic, strong) UIView *bottomView;
 @end
 
 @implementation WTAlbumAssetsController
@@ -44,10 +45,21 @@
     return self;
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    CGFloat bottom = 0;
+    if (@available(iOS 11.0, *)) {
+        bottom = self.view.safeAreaInsets.bottom;
+    }
+    self.bottomView.frame = CGRectMake(0, self.view.bounds.size.height - self.bottomView.bounds.size.height - bottom, self.bottomView.bounds.size.width, self.bottomView.bounds.size.height);
+    self.collectionView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - self.bottomView.bounds.size.height - bottom);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
     self.navigationController.navigationBar.backItem.title = @"";
+    self.navigationController.navigationBar.translucent = NO;
     self.loading = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     self.loading.frame = self.view.bounds;
     [self.view addSubview:self.loading];
@@ -56,9 +68,6 @@
     CGRect bottomFrame = CGRectMake(0, self.view.bounds.size.height, self.view.bounds.size.width, 0);
     if (self.configuration.allTypeMaxCount > 1 || self.configuration.imageMaxCount > 1 || self.configuration.videoMaxCount > 1) {
         bottomFrame = CGRectMake(0, self.view.bounds.size.height - 49, self.view.bounds.size.width, 49);
-        if (UIApplication.sharedApplication.statusBarFrame.size.height > 20) {
-            bottomFrame.origin.y -= 24;
-        }
     }
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -79,6 +88,7 @@
         UIView *bottomView = [[UIView alloc] initWithFrame:bottomFrame];
         bottomView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.8];
         [self.view addSubview:bottomView];
+        self.bottomView = bottomView;
         
         NSString *previewText = kWTAlbumTextPreview;
         if ([self.albumDelegate respondsToSelector:@selector(albumWillShowText:)]) {

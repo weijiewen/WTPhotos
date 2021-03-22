@@ -332,9 +332,7 @@
     
     self.setImage = nil;
     self.longPress = nil;
-    if (self.fromImageViews[self.currentIndex]) {
-        self.navigationController.navigationBar.hidden = self.navigationBarHidden;
-        self.navigationController.interactivePopGestureRecognizer.enabled = self.interactivePopGestureRecognizerEnable;
+    if (self.fromImageViews.count && self.fromImageViews[self.currentIndex]) {
         CGRect toWindowRect = [self.fromImageViews[self.currentIndex] convertRect:self.fromImageViews[self.currentIndex].bounds toView:UIApplication.sharedApplication.keyWindow];
         CGFloat scaleWidth = self.fromImageViews[self.currentIndex].bounds.size.width;
         if (self.fromImageViews[self.currentIndex].image.size.width > self.fromImageViews[self.currentIndex].image.size.height) {

@@ -76,6 +76,7 @@
     self = [super initWithRootViewController:controller];
     if (self) {
         self.configuration = configuration;
+        self.navigationBar.translucent = NO;
         [self.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
         self.navigationBar.tintColor = UIColor.whiteColor;
         self.navigationBar.barStyle = UIBarStyleBlack;
@@ -85,14 +86,6 @@
     }
     return self;
 }
-
-//- (void)viewWillAppear:(BOOL)animated {
-//    [super viewWillAppear:animated];
-//    
-//    self.navigationBar.tintColor = UIColor.whiteColor;
-//    self.navigationBar.barStyle = UIBarStyleBlack;
-//    self.navigationBar.barTintColor = UIColor.blackColor;
-//}
 
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
     [super dismissViewControllerAnimated:flag completion:completion];
